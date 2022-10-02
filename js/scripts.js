@@ -44,9 +44,10 @@ function makeGrid(height, width) {
           div.id = ("innerDiv2").concat(i,",", j);
           innerDiv1.appendChild(innerDiv2);
 
-          // Randomly assign a green or red square for starting configuration
+          
           var image = document.createElement("img");
           if(count%14==13){
+            //Add names to the grid
             var text = document.createElement("p");
             text.className = "name";
             text.innerHTML = names[person];
@@ -54,6 +55,7 @@ function makeGrid(height, width) {
             innerDiv2.appendChild(text);
             document.body.appendChild(div);
           }else if(13*i  + j < 14){  
+            //clear the first row
             image.src = "/images/xMark.png";
             image.className = "rs";
             image.id = ("image").concat(i,",", j);
@@ -61,6 +63,7 @@ function makeGrid(height, width) {
             document.body.appendChild(div);
           }
           else{
+            // Randomly assign a green or red square for starting configuration
             var randNum = Math.round(Math.random());
             if(randNum == 0){
               image.src = "/images/xMark.png";
