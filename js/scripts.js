@@ -2,7 +2,7 @@
 function changeSquare() {
   var image = document.getElementById(this.id);
   // If image is currently green square, change to red, and vice versa
-  if (image.src.match("/images/xMark.png")) {
+  if (image.src.match("/scheduler_frontend/images/xMark.png")) {
       image.src = "/scheduler_frontend/images/check.png";
   } else {
       image.src = "/scheduler_frontend/images/xMark.png";
@@ -66,9 +66,9 @@ function makeGrid(height, width) {
             // Randomly assign a green or red square for starting configuration
             var randNum = Math.round(Math.random());
             if(randNum == 0){
-              image.src = "/images/xMark.png";
+              image.src = "/scheduler_frontend/images/xMark.png";
             }else{
-              image.src = "/images/check.png";
+              image.src = "/scheduler_frontend/images/check.png";
             }
             image.className = "rs";
             image.id = ("image").concat(i,",", j);
