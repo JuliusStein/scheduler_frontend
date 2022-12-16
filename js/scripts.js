@@ -3,9 +3,9 @@ function changeSquare() {
   var image = document.getElementById(this.id);
   // If image is currently green square, change to red, and vice versa
   if (image.src.match("/images/xMark.png")) {
-      image.src = "/images/check.png";
+      image.src = "/scheduler_frontend/images/check.png";
   } else {
-      image.src = "/images/xMark.png";
+      image.src = "/scheduler_frontend/images/xMark.png";
   }
 };
 
